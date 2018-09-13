@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayComponent implements OnInit {
 
-  result:string;
+  result: string;
+  firstNumber: number;
+  secondNumber: number;
+  action: string;
 
   constructor() { }
 
@@ -15,4 +18,28 @@ export class TwoWayComponent implements OnInit {
     this.result = "";
   }
 
+  mathAction(): void {
+    if (this.firstNumber && this.secondNumber && this.action) {
+      switch (this.action) {
+        case '+':
+          this.result = (this.firstNumber + this.secondNumber).toString();
+          break;
+        case '-':
+          this.result = (this.firstNumber - this.secondNumber).toString();
+          break;
+        case 'X':
+          this.result = (this.firstNumber * this.secondNumber).toString();
+          break;
+        case '/':
+          {
+            if (this.secondNumber != 0)
+              this.result = (this.firstNumber / this.secondNumber).toString();
+            else this.result = "division by zero is undefined";
+          }
+          break;
+        default:
+          break;
+      }
+    }
+  }
 }
