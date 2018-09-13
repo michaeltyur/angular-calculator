@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayComponent implements OnInit {
 
+  result:string;
+
   constructor() { }
 
   ngOnInit() {
+    this.result = "";
   }
 
 }

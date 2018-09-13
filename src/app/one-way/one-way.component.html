@@ -10,7 +10,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">One Way Calculator</h5>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" 
+                class="btn btn-secondary" 
+                data-dismiss="modal"
+                (click)="firstnumber.value='';secondnumber.value='';result=''">Close</button>
       </div>
       <div class="modal-body">
         <form>
@@ -21,32 +24,32 @@
           </div>
           <div class="row mt-3">
             <div class="col">
-              <input type="text" class="form-control" placeholder="First Number" #firstnumber>
+              <input type="number" class="form-control" placeholder="First Number" #firstnumber>
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Second Number" #secondnumber>
+              <input type="number" class="form-control" placeholder="Second Number" #secondnumber>
             </div>
           </div>
           <div class="row mt-3">
             <div class="col">
               <button type="button" 
                       class="btn btn-primary btn-lg action ml-4" 
-                     (click)="sum(firstnumber.value,secondnumber.value)">+</button>
+                     (click)="sum(firstnumber.value,secondnumber.value);firstnumber.value='';secondnumber.value=''">+</button>
             </div>
             <div class="col">
               <button type="button" 
-                      class="btn btn-secondary btn-lg action ml-4" 
-                     (click)="subtraction(firstnumber.value,secondnumber.value)">-</button>
+                      class="btn btn-info btn-lg action ml-4" 
+                     (click)="subtraction(firstnumber.value,secondnumber.value);firstnumber.value='';secondnumber.value=''">-</button>
             </div>
             <div class="col">
               <button type="button" 
                       class="btn btn-success btn-lg action ml-3"
-                    (click)="multiplication(firstnumber.value,secondnumber.value)">X</button>
+                    (click)="multiplication(firstnumber.value,secondnumber.value);firstnumber.value='';secondnumber.value=''">X</button>
             </div>
             <div class="col">
               <button type="button" 
                       class="btn btn-danger btn-lg action ml-2"
-                     (click)="division(firstnumber.value,secondnumber.value)">/</button>
+                     (click)="division(firstnumber.value,secondnumber.value);firstnumber.value='';secondnumber.value=''">/</button>
             </div>
           </div>
         </form>

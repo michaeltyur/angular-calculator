@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OneWayComponent implements OnInit {
 
-  result: number;
-  constructor() { }
+  result: string;
+  constructor() {
+    this.result="";
+   }
 
   ngOnInit() {
   }
@@ -17,29 +19,32 @@ export class OneWayComponent implements OnInit {
 
     if (a && b) 
     {
-      this.result = a + b;
+      this.result = (Number(a) +  Number(b)).toString();
     }
 
   }
   subtraction(a: number, b: number): void {
     if (a && b) 
     {
-      this.result = a - b;
+      this.result = (a - b).toString();
     }
 
   }
   multiplication(a: number, b: number): void {
     if (a && b) 
     {
-      this.result = a * b;
+      this.result = (a * b).toString();
     }
 
   }
   division(a: number, b: number): void {
 
-    if (a && b && b != 0) 
+    if (a && b) 
     {
-      this.result = a / b;
+      if( b != 0){
+        this.result = (a / b).toString();
+      }
+      else this.result="division by zero is undefined";
     }
   }
 }
