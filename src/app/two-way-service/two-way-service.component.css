@@ -1,0 +1,13 @@
+.modal-footer{
+    justify-content: space-around;
+}
+.action{
+    width: 50px;
+    margin: auto;
+}
+.alert-info{
+    min-height: 50px;
+    font-size:30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}

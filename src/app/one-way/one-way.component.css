@@ -2,3 +2,12 @@
     width: 50px;
     margin: auto;
 }
+.modal-footer{
+    justify-content: space-around;
+}
+.alert-info{
+    min-height: 50px;
+    font-size:30px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
