@@ -4,8 +4,8 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Two Way Calculator</h5>
         <div class="row">
-          <button type="button" class="btn btn-secondary" (click)="result='';firstNumber='';secondNumber='';action=''">Clear</button>
-          <button type="button" class="btn btn-danger ml-3 mr-3" data-dismiss="modal" (click)="result=''">Close</button>
+          <button type="button" class="btn btn-secondary mr-3" (click)="result='';firstNumber='';secondNumber='';action=''">Clear</button>
+          <button type="button" class="btn btn-danger mr-3" data-dismiss="modal" (click)="result=''">Close</button>
         </div>
       </div>
       <div class="modal-body">
@@ -16,12 +16,12 @@
           <hr>
           <div class="row mt-3">
             <div class="col">
-              <input type="number" class="form-control" placeholder="First Number" #firstnumber name="firstnumber"
-                (keyup)="mathAction()" (change)="mathAction()" [(ngModel)]="firstNumber">
+              <input type="number" class="form-control" placeholder="First Number" #firstnumber name="firstnumber" (keyup)="mathAction()"
+                [(ngModel)]="firstNumber">
             </div>
             <div class="col">
-              <input type="number" class="form-control" placeholder="Second Number" #secondnumber name="secondnumber"
-                (keyup)="mathAction()" (change)="mathAction()" [(ngModel)]="secondNumber">
+              <input type="number" class="form-control" placeholder="Second Number" #secondnumber name="secondnumber" (keyup)="mathAction()"
+                [(ngModel)]="secondNumber">
             </div>
           </div>
         </form>
