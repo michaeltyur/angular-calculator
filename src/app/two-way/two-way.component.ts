@@ -20,7 +20,8 @@ export class TwoWayComponent implements OnInit {
 
   mathAction(): void {
     if (this.firstNumber && this.secondNumber && this.action) {
-      switch (this.action) {
+      switch (this.action) 
+      {
         case '+':
           this.result = (this.firstNumber + this.secondNumber).toString();
           break;
