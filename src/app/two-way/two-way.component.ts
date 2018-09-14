@@ -27,7 +27,7 @@ export class TwoWayComponent implements OnInit {
         case '-':
           this.result = (this.firstNumber - this.secondNumber).toString();
           break;
-        case 'X':
+        case 'x':
           this.result = (this.firstNumber * this.secondNumber).toString();
           break;
         case '/':
