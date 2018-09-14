@@ -3,23 +3,25 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Two Way Calculator</h5>
-        <button type="button" class="btn btn-secondary" (click)="result='';firstNumber='';secondNumber='';action=''">Clear</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="result=''">Close</button>
+        <div class="row">
+          <button type="button" class="btn btn-secondary" (click)="result='';firstNumber='';secondNumber='';action=''">Clear</button>
+          <button type="button" class="btn btn-danger ml-3 mr-3" data-dismiss="modal" (click)="result=''">Close</button>
+        </div>
       </div>
       <div class="modal-body">
         <form>
           <div class="alert alert-info" role="alert">
-            {{firstNumber}} {{action?action:'?'}} {{secondNumber}} {{action?'=':''}} {{result}}
+            {{firstNumber}} {{action?action:'?'}} {{secondNumber}} {{result?'=':''}} {{result}}
           </div>
           <hr>
           <div class="row mt-3">
             <div class="col">
               <input type="number" class="form-control" placeholder="First Number" #firstnumber name="firstnumber"
-                (keyup)="mathAction()" [(ngModel)]="firstNumber">
+                (keyup)="mathAction()" (change)="mathAction()" [(ngModel)]="firstNumber">
             </div>
             <div class="col">
               <input type="number" class="form-control" placeholder="Second Number" #secondnumber name="secondnumber"
-                (keyup)="mathAction()" [(ngModel)]="secondNumber">
+                (keyup)="mathAction()" (change)="mathAction()" [(ngModel)]="secondNumber">
             </div>
           </div>
         </form>
@@ -33,7 +35,7 @@
             <button type="button" class="btn btn-info btn-lg action ml-3" (click)="action='-';mathAction()"> - </button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-success btn-lg action ml-3" (click)="action='X';mathAction()">X</button>
+            <button type="button" class="btn btn-success btn-lg action ml-3" (click)="action='x';mathAction()">X</button>
           </div>
           <div class="col">
             <button type="button" class="btn btn-warning btn-lg action ml-3" (click)="action='/';mathAction()">/</button>

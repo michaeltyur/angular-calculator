@@ -8,6 +8,7 @@ import { TwoWayComponent } from './two-way/two-way.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TwoWayServiceComponent } from './two-way-service/two-way-service.component';
+import {ActionService} from './action.service'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { TwoWayServiceComponent } from './two-way-service/two-way-service.compon
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ActionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

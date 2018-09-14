@@ -14,7 +14,7 @@ export class ActionService {
           return (firstNumber + secondNumber).toString();
         case '-':
           return (firstNumber - secondNumber).toString();
-        case 'X':
+        case 'x':
           return (firstNumber * secondNumber).toString();
         case '/':
           {
