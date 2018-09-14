@@ -23,7 +23,7 @@ export class ActionService {
             else return "division by zero is undefined";
           }
         default:
-        return "en error ocured ;)";
+        return "en error occured ;)";
       }
     }
   }
